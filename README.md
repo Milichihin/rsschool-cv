@@ -1,1 +1,0 @@
-https://Milichihin.github.io/rsschool-cv/cv
