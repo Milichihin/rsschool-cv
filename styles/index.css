@@ -1,0 +1,131 @@
+:root {
+    --main-bg-color: #ffd800;
+    --footer-bg-color: #848484;
+  }
+  
+  .skills {
+    display: flex;
+  }
+  
+  .skills div {
+    width: 33.33333%;
+  }
+  
+  body {
+    max-width: 1000px;
+    min-width: 630px;
+    margin: auto;
+    /* font-family: "Courier New", Courier, monospace; */
+    font-family: monospace;
+  }
+  
+  .right-side section h2,
+  .right-side section div h2 {
+    box-shadow: inset 20rem 0 var(--main-bg-color);
+    padding-right: 20px;
+  }
+  
+  .right-side section div h2 {
+    display: table-cell;
+    height: 46px;
+    width: 500px;
+    vertical-align: middle;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "aside aside right right right"
+      "footer footer footer footer footer";
+  }
+  
+  aside img {
+    width: 60%;
+    min-width: 180px;
+    height: auto;
+  }
+  
+  footer {
+    grid-area: footer;
+  }
+  
+  .right-side,
+  main,
+  section,
+  footer div {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .right-side {
+    grid-area: right;
+  }
+  
+  aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    margin: 10px 0px 0px 10px;
+    padding: 10px 10px 0px 10px;
+    background-color: var(--main-bg-color);
+  }
+  
+  aside > h2,
+  aside > section > h2 {
+    font-size: 1rem;
+  }
+  
+  .right-side,
+  .right-side > section,
+  .right-side > section > h2 {
+    margin: 10px 10px 10px 0px;
+    padding: 10px 10px 10px 0px;
+  }
+  
+  .right-side > section > p {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-bg-color);
+    margin: 0px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
+  }
+  
+  footer div {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  footer > div > a > img {
+    height: 25px;
+    margin-right: 0.5rem;
+  }
+  
+  aside > img {
+    height: 100px;
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: column;
+  }
+  
