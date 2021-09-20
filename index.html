@@ -5,16 +5,28 @@
     <title>CV Milichiihn</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/index.css" />
+    <link href="styles/theme.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <main>
+        <nav class="nav">
+            <input class="nav__check" type="checkbox" id="showmenu" />
+            <label class="nav__showmenu" for="showmenu">&#9776;</label>
+            <label class="nav__back" for="showmenu"></label>
+            <ul class="menu">
+                <li><a class="menu__item" href="#up">UP</a></li>
+                <li><a class="menu__item" href="#experiencek">Work Experience</a></li>
+                <li><a class="menu__item" href="#courses">Courses</a></li>
+                <li><a class="menu__item" href="#education">Education</a></li>
+                <li><a class="menu__item" href="#skills">Skills</a></li>
+                <li><a class="menu__item" href="#languages">Languages</a></li>
+            </ul>
+        </nav>
         <aside>
-            <!-- <section> -->
-            <div><img src="pictures/photo-milichihin.jpg" alt="" /></div>
+            <div id="up"><img src="pictures/photo-milichihin.jpg" alt="" /></div>
             <h1><b>Dmitry Milichihin</b></h1>
             <h2>FrontEnd Developer</h2>
-            <!-- </section> -->
             <section>
                 <h2>Contact me:</h2>
                 <ul>
@@ -41,35 +53,30 @@
         </aside>
 
         <div class="right-side">
-            <section>
+            <section id="experiencek">
                 <h2>Work Experience</h2>
                 <p>
-                    By now I have no commercial experiance as developer. I work in
-                    advertisement a long time and now I desided to retrain. A few years
-                    I am interested in Web Development and nowedays I have some
-                    knowledges in this field. I had studied several courses but this
-                    time I’m plan to find a work in web development.
+                    By now I have no commercial experience as developer. I have been working in advertisement for a long time and now I decided to retrain. For a few years I have been interested in Web Development and nowadays I have gained some knowledge in this field.
+                    I had finished several courses and this time I’m planning to find a job in web development.
                 </p>
             </section>
             <section>
-                <h2>Courses, trainings, certificates</h2>
+                <h2 id="courses">Courses, trainings, certificates</h2>
                 <ul>
                     <li>SoftServe IT Academy. React online marathon (2021, online)</li>
                     <li>
-                        SoftServe IT Academy. HTML/CSS/JavaScript Fundamentals (2018,
-                        Lviv)
+                        SoftServe IT Academy. HTML/CSS/JavaScript Fundamentals (2018, Lviv)
                     </li>
                     <li>МВА Executive Management (2015, Lviv)</li>
                 </ul>
             </section>
-            <section>
+            <section id="education">
                 <h2>Education</h2>
                 <p>
-                    National University “Lviv Polytechnic” (2004, Lviv)<br />Electromechanical
-                    Faculty
+                    National University “Lviv Polytechnic” (2004, Lviv)<br />Electromechanical Faculty
                 </p>
             </section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <div>
                     <h2>Hard Skills</h2>
                     <ul>
@@ -90,7 +97,7 @@
                         <li>Problem-solving</li>
                     </ul>
                 </div>
-                <div>
+                <div id="languages">
                     <h2>Language Skills</h2>
                     <ul>
                         <li>English - B1 intermediate</li>
@@ -102,18 +109,29 @@
             <section>
                 <h2>Code example</h2>
                 <pre>
-                <code>
-                    function howManySmaller(arr, n) {  
-                        let arr2 = [];  
-                        for (let i in arr) {  
-                            arr[i] = arr[i].toFixed(2);  
-                            if (arr[i] &lt; n) {  
-                                arr2.push(arr[i]);  
-                            }  
-                        } return arr2.length;  
-                    }  
-                </code>
-            </pre>
+                    <!-- <code class="html">
+                        function howManySmaller(arr, n) {  
+                            let arr2 = [];  
+                            for (let i in arr) {  
+                                arr[i] = arr[i].toFixed(2);  
+                                if (arr[i] &lt; n) {  
+                                    arr2.push(arr[i]);  
+                                }  
+                            } return arr2.length;  
+                        }  
+                    </code> -->
+                    <code data-language="javascript">
+function howManySmaller(arr, n) {  
+    let arr2 = [];  
+    for (let i in arr) {  
+        arr[i] = arr[i].toFixed(2);  
+        if (arr[i] &lt; n) {  
+            arr2.push(arr[i]);  
+        }  
+    } return arr2.length;  
+}  
+                    </code>
+                </pre>
             </section>
         </div>
         <footer>
@@ -127,6 +145,7 @@
             </div>
         </footer>
     </main>
+    <script src="scripts/rainbow-custom.min.js"></script>
 </body>
 
 </html>

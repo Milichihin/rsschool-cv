@@ -1,101 +1,96 @@
 :root {
     --main-bg-color: #ffd800;
     --footer-bg-color: #848484;
-  }
-  
-  .skills {
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skills {
     display: flex;
-  }
-  
-  .skills div {
+}
+
+.skills div {
     width: 33.33333%;
-  }
-  
-  body {
+}
+
+body {
     max-width: 1000px;
     min-width: 630px;
     margin: auto;
     /* font-family: "Courier New", Courier, monospace; */
     font-family: monospace;
-  }
-  
-  .right-side section h2,
-  .right-side section div h2 {
+}
+
+.right-side section h2,
+.right-side section div h2 {
     box-shadow: inset 20rem 0 var(--main-bg-color);
     padding-right: 20px;
-  }
-  
-  .right-side section div h2 {
+}
+
+.right-side section div h2 {
     display: table-cell;
     height: 46px;
     width: 500px;
     vertical-align: middle;
-  }
-  
-  main {
+}
+
+main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "aside aside right right right"
-      "footer footer footer footer footer";
-  }
-  
-  aside img {
+    grid-template-areas: "aside aside right right right" "aside aside right right right" "aside aside right right right" "aside aside right right right" "aside aside right right right" "aside aside right right right" "aside aside right right right" "aside aside right right right" "footer footer footer footer footer";
+}
+
+aside img {
     width: 60%;
     min-width: 180px;
     height: auto;
-  }
-  
-  footer {
+}
+
+footer {
     grid-area: footer;
-  }
-  
-  .right-side,
-  main,
-  section,
-  footer div {
+}
+
+.right-side,
+main,
+section,
+footer div {
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
-  }
-  
-  .right-side {
+}
+
+.right-side {
     grid-area: right;
-  }
-  
-  aside {
+}
+
+aside {
     display: flex;
     flex-direction: column;
     grid-area: aside;
     margin: 10px 0px 0px 10px;
     padding: 10px 10px 0px 10px;
     background-color: var(--main-bg-color);
-  }
-  
-  aside > h2,
-  aside > section > h2 {
+}
+
+aside>h2,
+aside>section>h2 {
     font-size: 1rem;
-  }
-  
-  .right-side,
-  .right-side > section,
-  .right-side > section > h2 {
+}
+
+.right-side,
+.right-side>section,
+.right-side>section>h2 {
     margin: 10px 10px 10px 0px;
     padding: 10px 10px 10px 0px;
-  }
-  
-  .right-side > section > p {
+}
+
+.right-side>section>p {
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
-  }
-  
-  footer {
+}
+
+footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -103,9 +98,9 @@
     background-color: var(--footer-bg-color);
     margin: 0px 10px 10px 10px;
     padding: 0px 10px 10px 10px;
-  }
-  
-  footer div {
+}
+
+footer div {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -113,19 +108,200 @@
     align-items: center;
     justify-content: center;
     color: white;
-  }
-  
-  footer > div > a > img {
+}
+
+footer>div>a>img {
     height: 25px;
     margin-right: 0.5rem;
-  }
-  
-  aside > img {
+}
+
+aside>img {
     height: 100px;
-  }
-  
-  .right-side {
+}
+
+.right-side {
     display: flex;
     flex-direction: column;
-  }
-  
+}
+
+pre,
+code {
+    margin-left: 15px;
+}
+
+@media (max-width: 690px) {
+    body {
+        min-width: 320px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .right-side section div h2 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px 10px 0;
+        height: auto;
+        width: auto;
+    }
+    aside img {
+        width: 60%;
+        min-width: 100px;
+        max-width: 200px;
+        height: auto;
+    }
+    footer {
+        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--footer-bg-color);
+        margin: 0px 10px 10px 10px;
+        padding: 0px 10px 10px 10px;
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        /* width: auto; */
+        padding-top: 10px;
+    }
+    footer>div>p {
+        margin-top: 0;
+    }
+    footer>div>a>img {
+        margin-right: 0;
+    }
+    .skills {
+        display: flex;
+        flex-direction: column;
+    }
+    .skills div {
+        width: auto;
+    }
+}
+
+
+/* /////////////// hamburger-menu ////////////// */
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.nav {
+    user-select: none;
+}
+
+.nav__showmenu {
+    /* position: relative; */
+    position: fixed;
+    z-index: 3;
+    display: inline-block;
+    margin-left: -10px;
+    padding: 5px 10px 5px 10px;
+    top: 30px;
+    right: 10%;
+    font-size: 23px;
+    background-color: var(--main-bg-color);
+}
+
+.nav__back {
+    position: fixed;
+    transition: background-color .3s;
+}
+
+.menu,
+.menu__submenu {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /* left: 0; */
+    right: 0;
+    display: block;
+    /* width: 400px; */
+    width: 50%;
+    margin: 0;
+    padding: 100px 0;
+    text-transform: uppercase;
+    line-height: 2em;
+    background-color: #2c2c2c;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(100%);
+    transition: transform .3s;
+    will-change: transform;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.menu__submenu {
+    font-size: .8em;
+    background-color: #ddd;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+}
+
+.menu__showsub {
+    position: absolute;
+    right: 0;
+    margin-top: -34px;
+    padding: 10px;
+    line-height: normal;
+}
+
+.menu__item {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__submenu .menu__item {
+    color: #000;
+}
+
+.nav__check:checked~.nav__back {
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.menu__item:hover,
+.nav__showmenu:hover,
+.menu__showsub:hover {
+    opacity: 0.7;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav__check:checked+.nav__showmenu {
+    color: #fff;
+}
+
+.menu__check:checked~.menu__submenu {
+    max-height: 100vh;
+}
+
+.menu__check:checked+.menu__showsub {
+    transform: rotate(180deg);
+}
+
+.nav__check:checked~.menu {
+    transform: translateX(0);
+}
