@@ -129,7 +129,7 @@ code {
     margin-left: 15px;
 }
 
-@media (max-width: 690px) {
+@media (max-width: 760px) {
     body {
         min-width: 320px;
     }
