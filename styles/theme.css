@@ -124,7 +124,7 @@ pre {
     border: 1px solid #ccc;
     word-wrap: break-word;
     padding: 6px 10px;
-    line-height: 19px;
+    /* line-height: 19px; */
     margin-bottom: 20px
 }
 
@@ -216,4 +216,11 @@ pre .support.value {
 
 pre .regexp {
     color: #009926
+}
+
+@media (max-device-width: 650px) {
+    pre,
+    pre code {
+        font-size: 2.5rem;
+    }
 }
