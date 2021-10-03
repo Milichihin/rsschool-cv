@@ -238,11 +238,24 @@ code {
         z-index: 3;
         display: inline-block;
         margin-left: -10px;
-        padding: 5px 10px 5px 10px;
+        padding: 5px 15px 5px 15px;
         top: 30px;
         right: 10%;
-        font-size: 23px;
+        font-size: 40px;
         background-color: var(--main-bg-color);
+    }
+    @media (max-device-width: 650px) {
+        .nav__showmenu {
+            font-size: 100px;
+            padding: 5px 30px 5px 30px;
+        }
+        .menu__item {
+            font-size: 3rem;
+            line-height: 2.5em;
+        }
+        .menu>:first-child {
+            margin-top: 30%;
+        }
     }
     .nav__back {
         position: fixed;
