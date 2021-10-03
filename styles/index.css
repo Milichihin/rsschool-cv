@@ -203,7 +203,6 @@ code {
     footer div {
         display: flex;
         flex-direction: column;
-        /* width: auto; */
         padding-top: 10px;
     }
     footer>div>p {
@@ -247,7 +246,7 @@ code {
     @media (max-device-width: 650px) {
         .nav__showmenu {
             font-size: 100px;
-            padding: 5px 30px 5px 30px;
+            padding: 5px 25px 5px 20px;
         }
         .menu__item {
             font-size: 3rem;
