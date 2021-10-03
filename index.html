@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CV Milichiihn</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link href="styles/theme.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <nav class="nav">
+            <input class="nav__check" type="checkbox" id="showmenu" />
+            <label class="nav__showmenu" for="showmenu">&#9776;</label>
+            <label class="nav__back" for="showmenu"></label>
+            <ul class="menu">
+                <li><a class="menu__item" href="#up">UP</a></li>
+                <li><a class="menu__item" href="#experiencek">Work Experience</a></li>
+                <li><a class="menu__item" href="#courses">Courses</a></li>
+                <li><a class="menu__item" href="#education">Education</a></li>
+                <li><a class="menu__item" href="#skills">Skills</a></li>
+                <li><a class="menu__item" href="#languages">Languages</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <div id="up"><img src="pictures/photo-milichihin.jpg" alt="" /></div>
+            <h1><b>Dmitry Milichihin</b></h1>
+            <h2>FrontEnd Developer</h2>
+            <section>
+                <h2>Contact me:</h2>
+                <ul>
+                    <li>The date of birth: 1981-10-28</li>
+                    <li>City: Kyiv</li>
+                    <li>Phone: +38 (097) 523-56-15</li>
+                    <li>Email: milichihin@gmail.com</li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">Github</a>
+                    </li>
+                    <li>
+                        <a href="#">Codewars</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="right-side">
+            <section id="experiencek">
+                <h2>Work Experience</h2>
+                <p>
+                    By now I have no commercial experience as developer. I have been working in advertisement for a long time and now I decided to retrain. For a few years I have been interested in Web Development and nowadays I have gained some knowledge in this field.
+                    I had finished several courses and this time I’m planning to find a job in web development.
+                </p>
+            </section>
+            <section>
+                <h2 id="courses">Courses, trainings, certificates</h2>
+                <ul>
+                    <li>SoftServe IT Academy. React online marathon (2021, online)</li>
+                    <li>
+                        SoftServe IT Academy. HTML/CSS/JavaScript Fundamentals (2018, Lviv)
+                    </li>
+                    <li>МВА Executive Management (2015, Lviv)</li>
+                </ul>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <p>
+                    National University “Lviv Polytechnic” (2004, Lviv)<br />Electromechanical Faculty
+                </p>
+            </section>
+            <section class="skills" id="skills">
+                <div>
+                    <h2>Hard Skills</h2>
+                    <ul>
+                        <li>Git</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>Team player</li>
+                        <li>Leadership qualities</li>
+                        <li>Time management</li>
+                        <li>Critical thinking</li>
+                        <li>Problem-solving</li>
+                    </ul>
+                </div>
+                <div id="languages">
+                    <h2>Language Skills</h2>
+                    <ul>
+                        <li>English - B1 intermediate</li>
+                        <li>Russian - native speaker</li>
+                        <li>Ukrainian - native speaker</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Code example</h2>
+                <pre>
+                    <!-- <code class="html">
+                        function howManySmaller(arr, n) {  
+                            let arr2 = [];  
+                            for (let i in arr) {  
+                                arr[i] = arr[i].toFixed(2);  
+                                if (arr[i] &lt; n) {  
+                                    arr2.push(arr[i]);  
+                                }  
+                            } return arr2.length;  
+                        }  
+                    </code> -->
+                    <code data-language="javascript">
+function howManySmaller(arr, n) {  
+    let arr2 = [];  
+    for (let i in arr) {  
+        arr[i] = arr[i].toFixed(2);  
+        if (arr[i] &lt; n) {  
+            arr2.push(arr[i]);  
+        }  
+    } return arr2.length;  
+}  
+                    </code>
+                </pre>
+            </section>
+        </div>
+        <footer>
+            <div class="logo">
+                <a href="https://github.com/Milichihin"><img src="images/pngegg.png" alt="" /></a>
+                <p>My GitHub</p>
+            </div>
+            <div class="logo">© Milichihin 2021</div>
+            <div class="logo">
+                <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="" /></a>
+            </div>
+        </footer>
+    </main>
+    <script src="scripts/rainbow-custom.min.js"></script>
+</body>
+
+</html>
